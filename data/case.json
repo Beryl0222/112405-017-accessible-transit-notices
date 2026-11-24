@@ -1,0 +1,30 @@
+{
+  "records": [
+    {
+      "id": "AT-1",
+      "text": "青石站西厅 2 号电梯停用，东口无障碍坡道照常开放。",
+      "kind": "maintenance"
+    },
+    {
+      "id": "AT-2",
+      "text": "预计今晚九点恢复，维修组尚未完成载荷检查。",
+      "kind": "status-update"
+    },
+    {
+      "id": "AT-3",
+      "text": "无障碍接驳车停在东口，不能到达西厅站台。",
+      "kind": "operations-note"
+    }
+  ],
+  "stations": [
+    {
+      "id": "ST-9",
+      "name": "青石站",
+      "exits": [
+        "东口",
+        "西厅"
+      ]
+    }
+  ],
+  "case_id": "transit-1"
+}
