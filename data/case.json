@@ -1,30 +1,130 @@
 {
+  "case_id": "case-accessible-transit-notices",
   "records": [
     {
-      "id": "AT-1",
-      "text": "青石站西厅 2 号电梯停用，东口无障碍坡道照常开放。",
-      "kind": "maintenance"
+      "id": "AT-M1",
+      "kind": "maintenance",
+      "text": "青石站E2停用，东口R1开放；预计21:00恢复，未完成载荷检查。"
     },
     {
-      "id": "AT-2",
-      "text": "预计今晚九点恢复，维修组尚未完成载荷检查。",
-      "kind": "status-update"
+      "id": "AT-M2",
+      "kind": "inspection",
+      "text": "20:30 E2载荷通过，围挡未移除，未正式开放。"
     },
     {
-      "id": "AT-3",
-      "text": "无障碍接驳车停在东口，不能到达西厅站台。",
-      "kind": "operations-note"
+      "id": "AT-M3",
+      "kind": "release",
+      "text": "21:10 E2开放，净宽0.75米；宽轮椅从东口咨询。"
+    },
+    {
+      "id": "AT-Q1",
+      "kind": "passenger",
+      "text": "我和父亲在西厅，父亲不能离轮椅，宽0.8米，21:20前到东线站台，不走台阶、不分开。"
+    },
+    {
+      "id": "AT-Q2",
+      "kind": "passenger",
+      "text": "我能折叠轮椅并转移座位，与同伴21:00从东口出站。"
+    },
+    {
+      "id": "AT-A1",
+      "kind": "assistance",
+      "text": "U1在20:50-21:15接东口Q2，未开始，同期不能到西厅接人。"
+    },
+    {
+      "id": "AT-A2",
+      "kind": "vehicle",
+      "text": "B1在21:00到东口，一个固定轮椅位，可到东线站台接应点，不到西厅。"
+    },
+    {
+      "id": "AT-C1",
+      "kind": "clarification",
+      "text": "Q1回复：21:20要登上站台，不是只到东口，父亲不能转移。"
+    },
+    {
+      "id": "AT-C2",
+      "kind": "cancellation",
+      "text": "Q2在20:55同意同伴走R1自行出站，不需U1，未接到人。"
+    },
+    {
+      "id": "AT-D1",
+      "kind": "receipt",
+      "text": "U1在21:02西厅接到Q1及父亲，尚未到东口。"
+    },
+    {
+      "id": "AT-X1",
+      "kind": "place-note",
+      "text": "商场青石东门不是地铁东口，两者之间有带台阶天桥。"
     }
   ],
-  "stations": [
+  "objects": {
+    "nodes": [
+      "西厅",
+      "东口",
+      "东线站台",
+      "东接应点"
+    ],
+    "edges": [
+      {
+        "id": "E2",
+        "from": "西厅",
+        "to": "东线站台",
+        "minutes": 3,
+        "kind": "电梯",
+        "width": 0.75
+      },
+      {
+        "id": "R1",
+        "from": "东口",
+        "to": "东接应点",
+        "minutes": 4,
+        "kind": "坡道",
+        "width": 1.1
+      },
+      {
+        "id": "C1",
+        "from": "西厅",
+        "to": "东口",
+        "minutes": 8,
+        "kind": "平路",
+        "width": 1.2
+      },
+      {
+        "id": "B1",
+        "from": "东接应点",
+        "to": "东线站台",
+        "minutes": 9,
+        "kind": "接驳",
+        "seats": 1
+      }
+    ],
+    "staff": [
+      {
+        "id": "U1",
+        "window": "20:30-22:00"
+      },
+      {
+        "id": "U2",
+        "window": "21:30-22:30"
+      }
+    ]
+  },
+  "existing": [
     {
-      "id": "ST-9",
-      "name": "青石站",
-      "exits": [
-        "东口",
-        "西厅"
+      "id": "AS2",
+      "state": "confirmed",
+      "passenger": "Q2",
+      "staff": "U1",
+      "source": "AT-A1"
+    },
+    {
+      "id": "G1",
+      "state": "sent",
+      "passenger": "Q1",
+      "text": "21:00后E2可用，前往东线站台。",
+      "sources": [
+        "AT-M1"
       ]
     }
-  ],
-  "case_id": "transit-1"
+  ]
 }
